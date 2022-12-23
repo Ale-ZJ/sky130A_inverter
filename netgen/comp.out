@@ -1,0 +1,113 @@
+
+Cell sky130_fd_pr__nfet_01v8 (1) disconnected node: drain
+Cell sky130_fd_pr__nfet_01v8 (1) disconnected node: gate
+Cell sky130_fd_pr__nfet_01v8 (1) disconnected node: source
+Cell sky130_fd_pr__nfet_01v8 (1) disconnected node: bulk
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+(no matching pin)                          |drain                                      
+(no matching pin)                          |gate                                       
+(no matching pin)                          |source                                     
+(no matching pin)                          |bulk                                       
+1                                          |(no matching pin)                          
+2                                          |(no matching pin)                          
+3                                          |(no matching pin)                          
+4                                          |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_BZBQCZ in circuit inverter (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_UTJXZH in circuit inverter (0)(1 instance)
+
+Class inverter (0):  Merged 2 parallel devices.
+Subcircuit summary:
+Circuit 1: inverter                        |Circuit 2: inverter                        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (3->2)             |sky130_fd_pr__nfet_01v8 (1) **Mismatch**   
+sky130_fd_pr__pfet_01v8 (3->2)             |(no matching element)                      
+(no matching element)                      |L=0.18 (1)                                 
+Number of devices: 4 **Mismatch**          |Number of devices: 2 **Mismatch**          
+Number of nets: 12 **Mismatch**            |Number of nets: 9 **Mismatch**             
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: inverter                        |Circuit 2: inverter                        
+
+---------------------------------------------------------------------------------------
+Net: in                                    |Net: in                                    
+  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8/gate = 1         
+  sky130_fd_pr__pfet_01v8/2 = 2            |  L=0.18/gate = 1                          
+                                           |                                           
+Net: vss                                   |Net: vss                                   
+  sky130_fd_pr__nfet_01v8/1 = 1            |  sky130_fd_pr__nfet_01v8/(drain|source) = 
+  sky130_fd_pr__nfet_01v8/4 = 2            |  sky130_fd_pr__nfet_01v8/bulk = 1         
+  sky130_fd_pr__nfet_01v8/3 = 1            |                                           
+                                           |                                           
+Net: out                                   |Net: out                                   
+  sky130_fd_pr__nfet_01v8/3 = 1            |  sky130_fd_pr__nfet_01v8/(drain|source) = 
+  sky130_fd_pr__nfet_01v8/1 = 1            |  L=0.18/(drain|source) = 1                
+  sky130_fd_pr__pfet_01v8/3 = 1            |                                           
+  sky130_fd_pr__pfet_01v8/1 = 1            |                                           
+                                           |                                           
+Net: vdd                                   |Net: vdd                                   
+  sky130_fd_pr__pfet_01v8/1 = 1            |  L=0.18/(drain|source) = 1                
+  sky130_fd_pr__pfet_01v8/4 = 2            |                                           
+  sky130_fd_pr__pfet_01v8/3 = 1            |                                           
+                                           |                                           
+(no matching net)                          |Net: dummy_8                               
+                                           |  sky130_fd_pr__nfet_01v8/proxy3 = 1       
+                                           |                                           
+(no matching net)                          |Net: dummy_9                               
+                                           |  sky130_fd_pr__nfet_01v8/proxy4 = 1       
+                                           |                                           
+(no matching net)                          |Net: dummy_6                               
+                                           |  sky130_fd_pr__nfet_01v8/proxy1 = 1       
+                                           |                                           
+(no matching net)                          |Net: dummy_7                               
+                                           |  sky130_fd_pr__nfet_01v8/proxy2 = 1       
+                                           |                                           
+(no matching net)                          |Net: sky130_fd_pr__pfet_01v8               
+                                           |  L=0.18/bulk = 1                          
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: inverter                        |Circuit 2: inverter                        
+
+---------------------------------------------------------------------------------------
+(no matching instance)                     |Instance: sky130_fd_pr__nfet_01v8:1        
+                                           |  proxy1 = 1                               
+                                           |  proxy2 = 1                               
+                                           |  proxy3 = 1                               
+                                           |  proxy4 = 1                               
+                                           |  (drain,source) = (2,2)                   
+                                           |  gate = 2                                 
+                                           |  bulk = 2                                 
+                                           |                                           
+                                           |                                           
+(no matching instance)                     |Instance: L=0.18:2                         
+                                           |  (drain,source) = (2,1)                   
+                                           |  gate = 2                                 
+                                           |  bulk = 1                                 
+                                           |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+
+Subcircuit pins:
+Circuit 1: inverter                        |Circuit 2: inverter                        
+-------------------------------------------|-------------------------------------------
+in                                         |vdd **Mismatch**                           
+vss                                        |(no matching pin)                          
+out                                        |(no matching pin)                          
+vdd                                        |(no matching pin)                          
+(no matching pin)                          |vss                                        
+(no matching pin)                          |out                                        
+(no matching pin)                          |in                                         
+vdd                                        |(no matching pin)                          
+vss                                        |(no matching pin)                          
+out                                        |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for inverter and inverter altered to match.
+Device classes inverter and inverter are equivalent.
+
+Final result: Top level cell failed pin matching.

@@ -1,0 +1,7 @@
+** sch_path: /home/alexandra/inverter/xschem/inverter.sch
+.subckt inverter vdd vss out in
+*.PININFO vdd:B vss:B out:O in:I
+M1 out in vss vss sky130_fd_pr__nfet_01v8 L=0.18 W=4.5 nf=3 m=1
+M2 out in vdd sky130_fd_pr__pfet_01v8 L=0.18 W=3 nf=3 m=1
+.ends
+.end
